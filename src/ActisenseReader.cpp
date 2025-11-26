@@ -159,6 +159,9 @@ bool tActisenseReader::GetMessageFromStream(tN2kMsg &N2kMsg, bool ReadOut) {
               ClearBuffer();
               StartOfTextReceived=true;
             }
+            else{
+              if (ReadOut) ReadStream->read();
+            }
             break;
           default:
             EscapeReceived=(NewByte==Escape);
