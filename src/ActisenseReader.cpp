@@ -158,8 +158,7 @@ bool tActisenseReader::GetMessageFromStream(tN2kMsg &N2kMsg, bool ReadOut) {
               ReadStream->read(); // Read ch out
               ClearBuffer();
               StartOfTextReceived=true;
-            }
-            else{
+            } else {
               if (ReadOut) ReadStream->read();
             }
             break;
